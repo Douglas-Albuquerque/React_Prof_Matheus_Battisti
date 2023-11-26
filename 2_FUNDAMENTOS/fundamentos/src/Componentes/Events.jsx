@@ -2,8 +2,15 @@ import React from 'react'
 
 const Events = () => {
     const handleMyEvent = (e) =>{
-        console.log(e);
-        console.log("Clicou");
+        alert("Clicou");
+    }
+
+    const renderSomething = (x) => {
+        if (x) {
+            return <h1>Renderizo isso</h1>
+        } else {
+            return <h1>Renderizo aquilo</h1>
+        }
     }
     return (
         <div>
@@ -11,10 +18,12 @@ const Events = () => {
                 <button onClick={handleMyEvent}>Clique aqui</button>
             </div>
             <div>
-                <button onClick={()=> console.log("clicou denovo")}>Click</button>
+                <button onClick={()=> alert("clicou denovo")}>Click</button>
             </div>
+            {renderSomething(true)}
+            {renderSomething(false)}
         </div>
-    )
-}
+    );
+};
 
 export default Events
