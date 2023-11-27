@@ -1,18 +1,22 @@
 import './App.css';
-import Atlanta from './assets/img2.jpeg'
+import ListRender from './components/ListRender';
+//import Atlanta from './assets/img2.jpeg'
+import ManageData from './components/ManageData';
 
 function App() {
   return (
     <div className="App-header">
-      <h3>Avançado em React</h3>
-      {/* imagem em public */}
+{/*       <h3>Avançado em React</h3>
+    
       <div>
         <img src="/img1.webp" alt="imagem cidade" />
       </div>
-      {/* imagem em assets */}
+   
       <div>
         <img src={Atlanta} alt="logo atlanta tecnologia" />
-      </div>
+      </div> */}
+      <ManageData/>
+      <ListRender/>
     </div>
   );
 }
